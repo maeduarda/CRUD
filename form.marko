@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <style>
+   body{
+      background-color:#FFE4C4;
+   }
+   </style>
+</head>
+<body>
+<div class="container">
+    <h1>Cadastro</h1>
+    <br>
+    <form action="/alunos" method="post"> 
+    
+        
+            <input type="hidden" name="id" value="${data.id}">
+       
+         <br>
+      
+            <input type="text" name="nome" placeholder="Nome" value="${data.nome}">
+      
+         <br>
+      
+            <input type="email" name="email" placeholder="Email" value="${data.email}">
+     
+         <br>
+      
+      <label>Curso: </label>
+      <p>
+      <label>
+        <input name="curso" type="radio" value="Tecnólogo em ADS" checked="${data.curso == 'Tecnólogo em ADS'}"/>
+        <span>Tecnólogo em ADS</span>
+      </label>
+    </p>
+
+    <p>
+      <label>
+        <input name="curso" type="radio" value="Tec em Informática para Internet" checked="${data.curso == 'Tec. em Informática para Internet'}"/>
+        <span>Tec em Informática para Internet</span>
+      </label>
+    </p>
+
+    <p>
+      <label>
+        <input name="curso" type="radio" value="Tec. em Qualidade" checked="${data.curso == 'Tec. em Qualidade '}"/>
+        <span>Tec em Qualidade</span>
+      </label>
+    </p>
+        
+
+        <a href="/" style="margin-right:10pt" class="waves-effect waves-light btn">Cancelar</a>
+
+        <button class="waves-effect waves-light btn">Salvar</button>
+    </form>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html> 
